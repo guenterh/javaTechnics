@@ -1,0 +1,6 @@
+
+1) https://github.com/FasterXML/jackson-databind
+
+Dieses package bildet das data binding zwischen Json Strukturen und Objekten ab
+Es beruht auf jackson-core und jackson-annotation
+
