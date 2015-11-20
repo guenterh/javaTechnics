@@ -1,9 +1,21 @@
 package generics.chapter215;
 
+
+class Myclass extends CombineParentInterfaces
+{
+
+    @Override
+    public String getMethodInterface1() {
+        return null;
+    }
+}
+
+
+
 /**
  * Created by swissbib on 30.06.15.
  */
-public class CombineInterfaces <T extends CombineParentInterfaces & InterfaceCombine1 & InterfaceCombine2> {
+public class CombineInterfaces <T extends CombineParentInterfaces  & InterfaceCombine1 & InterfaceCombine2> {
 
 
     private T t;
@@ -17,18 +29,18 @@ public class CombineInterfaces <T extends CombineParentInterfaces & InterfaceCom
 
         String test = this.t.combineParentMethod1();
         //return ((CombineChildInterfaces)this.t).combineChildMethod1();
-        return this.t.getMethodInterface2();
+        return this.t.combineParentMethod1();
 
     }
 
 
     public static void main(String[] args) {
 
-        CombineInterfaces<CombineChildInterfaces> combineChild = new CombineInterfaces<>(new CombineChildInterfaces());
+        CombineInterfaces<CombineParentInterfaces> combineChild = new CombineInterfaces<>(new CombineChildInterfaces());
         System.out.println(combineChild.getCombineInterfaces());
 
 
-        CombineInterfaces<CombineParentInterfaces> combineChild1 = new CombineInterfaces<>(new CombineParentInterfaces());
+        CombineInterfaces<CombineParentInterfaces> combineChild1 = new CombineInterfaces<>(new Myclass());
         System.out.println(combineChild1.getCombineInterfaces());
 
 
