@@ -1,15 +1,4 @@
 
-### three hashes
-# one hash
-
-```xml
-<data source="data">
-	<java class="org.culturegraph.mf.morph.functions.Compose" prefix="Hula " />
-</data>
-``` 
- 
- 
-
 # Goals #
  
 * All our RDF transformations should be performed with Metafacture / Metamorph 
@@ -41,21 +30,13 @@ similar as described in http://www.dlib.org/dlib/may15/boehme/05boehme.html Intr
         * https://github.com/linked-swissbib/mfWorkflows/tree/master/src/main/resources/transformation/item
 
 ### lessons learned
+#### Metamorph transformations with a focus on RDF/XML or JSON-LD
 * in a first step all our Metamorph transformations were serialized in RDF/XML.     
 Because we use Elasticsearch as data store an additional transformation to JSON-LD had to be done in a subsequent Metafacture module. 
-This is resource intensive and unnecessary. Therefor we changed the transformations in a way which makes it easier for the next module to create JSON (ES Bulk structures) 
-todo: give more information
- https://github.com/linked-swissbib/mfWorkflows/tree/master/src/main/resources/transformation/jsonld
-* 
-
-
-
-
-```xml
-<data source="data">
-	<java class="org.culturegraph.mf.morph.functions.Compose" prefix="Hula " />
-</data>
-``` 
+This is resource intensive and unnecessary. Therefor we changed the transformations in a way which makes it easier for the next module to create JSON (ES Bulk structures)
+* https://github.com/linked-swissbib/mfWorkflows/tree/master/src/main/resources/transformation/jsonld 
+* todo: give more information
+        
         
     
         
